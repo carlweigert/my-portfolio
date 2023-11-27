@@ -204,6 +204,7 @@ a {
 }
 
 @media only screen and (max-width: 720px) {
+
     .container {
         width: 90%;
     }
@@ -266,10 +267,11 @@ a {
 
     .project .left h2 {
         margin-top: auto;
+        font-size: 20px;
     }
 
     .project .left .project-description {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .project .left .label {
@@ -277,11 +279,11 @@ a {
     }
 
     .project .left .project-link {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .project img {
-        margin-top: 20px;
+        margin-top: -5vw;
     }
 
     .project .right {
@@ -320,7 +322,9 @@ a {
 
 }
 
-@media only screen and (max-width: 1000px) {
+    /*projectsida*/
+
+    @media only screen and (max-width: 1000px) {
     .portfolio-image {
         margin-left: 1vw;
     }
