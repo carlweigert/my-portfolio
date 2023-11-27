@@ -6,7 +6,7 @@ body {
     padding: 0;
     background-color: whitesmoke;
     font-family: Arial, sans-serif;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 h1 {
     font-family: 'Pixelify Sans', sans-serif;
@@ -17,80 +17,116 @@ h2 {
     font-family: 'Poppins', sans-serif;
 }
 
-.container {
-    margin: 0 6vw;
-    max-width: 1400px;
+h3 {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-family: 'Poppins', sans-serif; 
+}
+.intro-container {
+    margin: 1vw 8vw;
+    max-width: 80%;
 }
 .navbar {
-    box-shadow: 0 4px 10px 0 grey;
     background-color: black;
     opacity: 95%;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     height: 70px;
 }
 
 .navbar a {
-    float: left;
-    display: block;
+    display: flex;
     color: whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-weight: 200;
+    font-size: 18px;
 }
 
-.navbar a:hover {
+.navbar .meny a:hover {
     transform: scale(1.1);
-    font-weight: 700;
+    color: orange;
 }
 
-.navbar a img {
+.navbar .header-container .logo a img {
     max-height: 30px;
     margin-right: 5px;
 }
 
-.navbar .header {
+.navbar .header-container {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 64px;
+}
+
+.meny {
+    display: flex;
 }
 
 .header {
     padding: 16px 0;
 }
 
-.intro h1 {
-    font-size: 7vw;
-    max-width: 60%;
-    margin: 96px 0;
+.intro-container h1 {
+    font-size: 8vw;
+    max-width: 80%;
+    margin: 96px 0 165px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    justify-content:space-around;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+}
+
+.banner h3 {
+    color: white;
 }
 
 .project {
     display: flex;
     height: 80vh;
-    border-top: 2px solid;
+    margin: auto;
     padding-top: 32px;
+    padding-bottom: 64px;
     margin-bottom: 32px;
     margin-left: 32px;
     margin-right: 32px;
+    border-bottom: 1px solid black;
+    width: auto;
 }
 
 .project .left {
+    display: flex;
+    flex-direction: column;
     width: 50%;
     padding-left: 32px;
+}
+
+.wrapper-link {
+    margin-top: 30px;
 }
 
 .project .left .project-link {
     color: black;
     text-decoration: none;
     border: 1px solid;
-    text-transform: uppercase;
     padding: 16px 24px;
     border-radius: 32px;
     font-size: 1rem;
-    margin-top: 240px;
-    transition: all 200ms ease-in;
+    margin: auto;
+    transition: all 150ms ease-in;
     display: inline-block;
 }
 
@@ -114,17 +150,185 @@ h2 {
 
 .project .left .project-description {
     font-size: 1rem;
-    max-width: 250px;
+    max-width: 300px;
 }
 
 .project .right {
-    width: 100%;
-    border-left: 2px solid;
+    display: flex;
+    width: 50%;
+    border-left: 1px solid;
     padding-left: 32px;
 }
 
 .project .right img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
+
+/*projectsida*/
+
+.navbar .header-container .meny .project-site a {
+    text-decoration: underline;
+}
+
+.portfolio-section {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: auto;
+}
+
+.portfolio-text {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 80px;
+    color: #000;
+    width: 1100px;
+    margin-right: -10vw;
+}
+
+.portfolio-image {
+    display: flex;
+    width: 744px;
+    height: 944px;
+    margin-right: -10vw;
+}
+
+.portfolio-image img {
+    width: inherit;
+    height: inherit;
+    object-fit: auto;
+}
+
+@media only screen and (max-width: 720px) {
+    .container {
+        width: 90%;
+    }
+    
+    .navbar {
+        position: static;
+        height: auto;
+    }
+
+    .navbar .header-container {
+        flex-direction: column;
+        padding: 0 0 0 0;
+    }
+
+    .navbar .header-container .meny {
+        display: flex;
+        justify-content: center;
+        font-weight: 100;
+        font-size: 18px;
+        
+    }
+
+    .navbar .header-container .logo a img {
+       display: flex;
+       justify-content: center;
+       max-height: 30px;
+       margin-right: 5px;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .banner {
+        flex-direction: row;
+    }
+
+    .banner h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .project {
+        flex-direction: column-reverse;
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+        border-bottom: 1px solid black;
+    }
+
+    .project .left {
+        display: flex;
+        width: 100%;
+    }
+
+    .project .left h2 {
+        margin-top: auto;
+    }
+
+    .project .left .project-description {
+        font-size: 20px;
+    }
+
+    .project .left .label {
+        font-size: 18px;
+    }
+
+    .project .left .project-link {
+        font-size: 18px;
+    }
+
+    .project img {
+        margin-top: 20px;
+    }
+
+    .project .right {
+        justify-content: center;
+        width: auto;
+        border-left: transparent;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    /*projectsida*/
+
+    .portfolio-section {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: auto;
+        width: auto;
+    }
+
+    .portfolio-text {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: 20px;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        color: #000;
+    }
+
+    .portfolio-image {
+        display: flex;
+        width: 80vw;
+        height: auto;
+        margin-right: -1vw;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .portfolio-image {
+        margin-left: 1vw;
+    }
+
+    .portfolio-text {
+        margin-left: 10vw;
+        margin-right: -15vw;
+        width: 55vw;
+    }
+}
+
